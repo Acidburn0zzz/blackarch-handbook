@@ -295,26 +295,72 @@ $ sudo blackarch-install
 
 \chapter{Developer Guide}
 
-%\section{Repository structure}
-%foo bar
+\section{Arch's Build System and Repositories}
 
-%\subsection{broken}
-%foo bar
+PKGBUILD files are build scripts. Each one tells makepkg(1) how to create a package. PKGBUILD files
+are written in Bash.
 
-%\subsection{docs}
-%foo bar
+For more information, read (or skim through) the following:
+\begin{itemize}
+	\item \href{https://wiki.archlinux.org/index.php/Creating_Packages}{Arch Wiki: Creating Packages}
+	\item \href{https://wiki.archlinux.org/index.php/Makepkg}{Arch Wiki: makepkg}
+	\item \href{https://wiki.archlinux.org/index.php/PKGBUILD}{Arch Wiki: PKGBUILD}
+	\item \href{https://wiki.archlinux.org/index.php/Arch_Packaging_Standards}{Arch Wiki: Arch Packaging Standards}
+\end{itemize}
 
-%\subsection{mirror}
-%foo bar
+\section{Repository structure}
 
-%\subsection{misc}
-%foo bar
+You can find the main BlackArch git repo here:
+\href{https://github.com/BlackArch/blackarch}{https://github.com/BlackArch/blackarch}. There are
+also several secondary repos here:
+\href{https://github.com/BlackArch}{https://github.com/BlackArch}.
 
-%\subsection{packages}
-%foo bar
+Within the main git repo, there are three important directories:
 
-%\subsection{scripts}
-%foo bar
+\begin{itemize}
+	\item docs - Documentation.
+	\item packages - PKGBUILD files.
+	\item scripts - Useful little scripts.
+\end{itemize}
+
+\subsection{Scripts}
+
+Here is a reference for scripts in the \verb|scripts/| directory:
+
+\begin{itemize}
+	\item baaur - Soon, this will upload packages to the AUR.
+	\item babuild - Build a package.
+	\item bachroot - Manage a chroot for testing.
+	\item baclean - Clean old .pkg.tar.xz files from the package repo.
+	\item baconflict - Soon this will replace \verb|scripts/conflicts|.
+	\item bad-files - Find bad files in built packages.
+	\item balock - Obtain or release the package repo lock.
+	\item banotify - Notify IRC about package pushes.
+	\item barelease - Release packages to the package repo.
+	\item baright - Print the BlackArch copyright info.
+	\item basign - Sign packages.
+	\item basign-key - Sign a key.
+	\item blackman - This behaves sort of like pacman but builds from git (not to be confused with nrz's blackman).
+	\item check-groups - Check groups.
+	\item checkpkgs - Check packages for errors.
+	\item conflicts - Check for file conflicts.
+	\item dbmod - Modify a package database.
+	\item depth-list - Create a list sorted by dependency depth.
+	\item deptree - Create a dependency tree, listing only blackarch-provided packages.
+	\item get-blackarch-deps - Get a list of blackarch dependencies for a package.
+	\item get-official - Get official packages for release.
+	\item list-loose-packages - List packages that are not in groups and are not dependencies for other packages.
+	\item list-needed - List missing dependencies.
+	\item list-removed - List packages that are in the package repo but not in git.
+	\item list-tools - List tools.
+	\item outdated - Look for packages that are out-dated in the package repo relative to the git repo.
+	\item pkgmod - Modify a build package.
+	\item pkgrel - Increment pkgrel in a package.
+	\item prep - Clean up a PKGBUILD file's style and find errors.
+	\item sitesync - Sync between a local copy of the package repo and a remote copy.
+	\item size-hunt - Hunt for large packages.
+	\item source-backup - Backup package source files.
+\end{itemize}
 
 \section{Contributing to repository}
 This section shows you how to contribute to the BlackArch Linux project. We
