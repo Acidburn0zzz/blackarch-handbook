@@ -213,16 +213,16 @@ As part of an alternative method of installation, you can build the BlackArch
 packages from source. You can find the PKGBUILDs on
 \href{https://github.com/BlackArch/blackarch/tree/master/packages}{github}. To
 build the entire repo, you can use the
-\href{https://github.com/BlackArch/blackman}{blackman} tool.
+\href{https://github.com/BlackArch/blackman}{Blackman} tool.
 \begin{itemize}
-\item First, you have to install blackman. If the BlackArch package repository
-is setup on your machine, you can install blackman:
+\item First, you have to install Blackman. If the BlackArch package repository
+is setup on your machine, you can install Blackman:
 {\small
 \begin{verbatim}
 pacman -S blackman
 \end{verbatim}
 }
-\item You can build and install blackman from source:
+\item You can build and install Blackman from source:
 {\small
 \color{gray}
 \begin{verbatim}
@@ -233,6 +233,18 @@ wget https://raw2.github.com/BlackArch/blackarch/master/packages/blackman/PKGBUI
 makepkg -s
 \end{verbatim}
 }
+\item Or you can install Blackman from the AUR:
+{\small
+\color{gray}
+\begin{verbatim}
+<whatever AUR helper you use> -S blackman
+\end{verbatim}
+}
+\end{itemize}
+
+\subsection{Basic Blackman usage} Blackman is very simple to use, though the flags are different from what you
+would typically expect from something like pacman. Basic usage has been outlined below.  
+\begin{itemize}
 \item Download, compile and install packages:
 {\small
 \color{gray}
@@ -340,7 +352,7 @@ Here is a reference for scripts in the \verb|scripts/| directory:
 	\item baright - Print the BlackArch copyright info.
 	\item basign - Sign packages.
 	\item basign-key - Sign a key.
-	\item blackman - This behaves sort of like pacman but builds from git (not to be confused with nrz's blackman).
+	\item blackman - This behaves sort of like pacman but builds from git (not to be confused with nrz's Blackman).
 	\item check-groups - Check groups.
 	\item checkpkgs - Check packages for errors.
 	\item conflicts - Check for file conflicts.
