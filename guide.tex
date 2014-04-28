@@ -320,6 +320,219 @@ For more information, read (or skim through) the following:
 	\item \href{https://wiki.archlinux.org/index.php/Arch_Packaging_Standards}{Arch Wiki: Arch Packaging Standards}
 \end{itemize}
 
+\section{Blackarch PKGBUILD standards}
+
+For the sake of simplicity, our PKGBUILDs are similar to that of the AUR ones, with a few small differences that I will outline below.
+
+\subsection{Groups}
+
+To allow users to install a specific range of packages quickly and easily, we have separated our packages into groups. These groups allow users to simple go "pacman -S <group name>" in order to pull a lot of packages.
+
+\subsubsection{blackarch}
+
+The blackarch group is what every package must be included in along with its relevant group, to allow users to install every package very easily.
+
+What should be in here: Everything.
+
+\subsubsection{blackarch-anti-forensic}
+
+This group is for packages that are used for countering forensic activities, such as encryption, steganography, anything that modifies files/file attributes, or just anything that makes changes to the system for the purposes of hiding information.
+
+Examples: luks, TrueCrypt, Timestomp, dd, ropeadope, secure-delete
+
+\subsubsection{blackarch-automation}
+
+This group is for packages that are used for automating anything. Should be fairly self-explanatory.
+
+Examples: blueranger, tiger, wiffy
+
+\subsubsection{blackarch-backdoor}
+
+This group is for packages that exploit or open backdoors on already vulnerable systems. Again should be reasonably self-explanatory.
+
+Examples: backdoor-factory, rrs, weevely
+
+\subsubsection{blackarch-binary}
+
+This group is for 
+
+Examples: binwally, packerid
+
+\subsubsection{blackarch-bluetooth}
+
+This group is for any packages that exploits anything to do with the Bluetooth standard (802.15.1).
+
+Examples: ubertooth, tbear, redfang
+
+\subsubsection{blackarch-code-audit}
+
+This group is for any packages that audit existing source code for vulnerability analysis.
+
+Examples: flawfinder, pscan
+
+\subsubsection{blackarch-cracker}
+
+This group is for any packages that is used for cracking any kind of cryptographic function, ie hashes.
+
+Examples: hashcat, john, crunch
+
+\subsubsection{blackarch-crypto}
+
+This group is for any packages that is to do with cryptography, be it cracking or analysis or anything.
+
+Examples: ciphertest, xortool, sbd
+
+\subsubsection{blackarch-database}
+
+This group is for any packages that involve some kind of database exploitation on any level.
+
+Examples: metacoretex, blindsql
+
+\subsubsection{blackarch-debugger}
+
+This group is for packages that allow the user to view what a particular program is "doing" as it runs its instructions.
+
+Examples: radare2, shellnoob
+
+\subsubsection{blackarch-decompiler}
+
+This group is for packages that attempt to reverse a compiled program into bare source code.
+
+Examples: flasm, jd-gui
+
+\subsubsection{blackarch-defensive}
+
+This group is for any packages that are used to protect a user from malware \& attacks from other users.
+
+Examples: arpon, chkrootkit, sniffjoke
+
+\subsubsection{blackarch-disassembler}
+
+This group is similar to blackarch-decompiler, and there will probably be a lot of programs that fall into both, however these packages produce assembly output rather than the raw source code.
+
+Examples: inguma, radare2
+
+\subsubsection{blackarch-dos}
+
+
+
+\subsubsection{blackarch-drone}
+
+
+
+\subsubsection{blackarch-exploitation}
+
+
+
+\subsubsection{blackarch-fingerprint}
+
+
+
+\subsubsection{blackarch-firmware}
+
+
+
+\subsubsection{blackarch-forensic}
+
+
+
+\subsubsection{blackarch-fuzzer}
+
+
+
+\subsubsection{blackarch-hardware}
+
+
+
+\subsubsection{blackarch-honeypot}
+
+
+
+\subsubsection{blackarch-keylogger}
+
+
+
+\subsubsection{blackarch-malware}
+
+
+
+\subsubsection{blackarch-misc}
+
+
+
+\subsubsection{blackarch-mobile}
+
+
+
+\subsubsection{blackarch-networking}
+
+
+
+\subsubsection{blackarch-nfc}
+
+
+
+\subsubsection{blackarch-packer}
+
+
+
+\subsubsection{blackarch-proxy}
+
+
+
+\subsubsection{blackarch-recon}
+
+
+
+\subsubsection{blackarch-reversing}
+
+
+
+\subsubsection{blackarch-scanner}
+
+
+
+\subsubsection{blackarch-sniffer}
+
+
+
+\subsubsection{blackarch-social}
+
+
+
+\subsubsection{blackarch-spoof}
+
+
+
+\subsubsection{blackarch-threat-model}
+
+
+
+\subsubsection{blackarch-tunnel}
+
+
+
+\subsubsection{blackarch-unpacker}
+
+
+
+\subsubsection{blackarch-voip}
+
+
+
+\subsubsection{blackarch-webapp}
+
+
+
+\subsubsection{blackarch-windows}
+
+
+
+\subsubsection{blackarch-wireless}
+
+
+
+
 \section{Repository structure}
 
 You can find the main BlackArch git repo here:
